@@ -36,8 +36,8 @@ const SearchInput = ({
     selectedCountry ? ULRs.getMainCountryChatByName(selectedCountry) : null
   );
 
-  const filterCountries = mapData.features.filter(name =>
-    name.properties.ADMIN.toLowerCase().includes(searchedValue.toLowerCase())
+  const filterCountries = mapData.filter(name =>
+    name.properties.admin.toLowerCase().includes(searchedValue.toLowerCase())
   );
 
   useEffect(() => {
